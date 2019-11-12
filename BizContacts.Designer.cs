@@ -41,8 +41,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.txtNotes = new System.Windows.Forms.Label();
-            this.txtTile = new System.Windows.Forms.TextBox();
+            this.Notes = new System.Windows.Forms.Label();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.txtFName = new System.Windows.Forms.TextBox();
             this.txtLName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -50,11 +50,11 @@
             this.txtState = new System.Windows.Forms.TextBox();
             this.txtPostalCode = new System.Windows.Forms.TextBox();
             this.txtCompany = new System.Windows.Forms.TextBox();
-            this.txtWebskte = new System.Windows.Forms.TextBox();
+            this.txtWebsite = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.txtMobile = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtNotes = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cboSearch = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -186,22 +186,22 @@
             this.label12.TabIndex = 11;
             this.label12.Text = "Date Entered";
             // 
-            // txtNotes
+            // Notes
             // 
-            this.txtNotes.AutoSize = true;
-            this.txtNotes.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.txtNotes.Location = new System.Drawing.Point(481, 86);
-            this.txtNotes.Name = "txtNotes";
-            this.txtNotes.Size = new System.Drawing.Size(47, 16);
-            this.txtNotes.TabIndex = 12;
-            this.txtNotes.Text = "Notes";
+            this.Notes.AutoSize = true;
+            this.Notes.Font = new System.Drawing.Font("MS UI Gothic", 12F);
+            this.Notes.Location = new System.Drawing.Point(481, 86);
+            this.Notes.Name = "Notes";
+            this.Notes.Size = new System.Drawing.Size(47, 16);
+            this.Notes.TabIndex = 12;
+            this.Notes.Text = "Notes";
             // 
-            // txtTile
+            // txtTitle
             // 
-            this.txtTile.Location = new System.Drawing.Point(106, 11);
-            this.txtTile.Name = "txtTile";
-            this.txtTile.Size = new System.Drawing.Size(284, 19);
-            this.txtTile.TabIndex = 13;
+            this.txtTitle.Location = new System.Drawing.Point(106, 11);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(284, 19);
+            this.txtTitle.TabIndex = 13;
             // 
             // txtFName
             // 
@@ -252,12 +252,12 @@
             this.txtCompany.Size = new System.Drawing.Size(284, 19);
             this.txtCompany.TabIndex = 20;
             // 
-            // txtWebskte
+            // txtWebsite
             // 
-            this.txtWebskte.Location = new System.Drawing.Point(106, 299);
-            this.txtWebskte.Name = "txtWebskte";
-            this.txtWebskte.Size = new System.Drawing.Size(284, 19);
-            this.txtWebskte.TabIndex = 21;
+            this.txtWebsite.Location = new System.Drawing.Point(106, 299);
+            this.txtWebsite.Name = "txtWebsite";
+            this.txtWebsite.Size = new System.Drawing.Size(284, 19);
+            this.txtWebsite.TabIndex = 21;
             // 
             // txtSearch
             // 
@@ -280,13 +280,13 @@
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 19);
             this.dateTimePicker1.TabIndex = 24;
             // 
-            // textBox12
+            // txtNotes
             // 
-            this.textBox12.Location = new System.Drawing.Point(536, 83);
-            this.textBox12.Multiline = true;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(284, 133);
-            this.textBox12.TabIndex = 25;
+            this.txtNotes.Location = new System.Drawing.Point(536, 83);
+            this.txtNotes.Multiline = true;
+            this.txtNotes.Name = "txtNotes";
+            this.txtNotes.Size = new System.Drawing.Size(284, 133);
+            this.txtNotes.TabIndex = 25;
             // 
             // dataGridView1
             // 
@@ -295,7 +295,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(9, 387);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 21;
-            this.dataGridView1.Size = new System.Drawing.Size(858, 190);
+            this.dataGridView1.Size = new System.Drawing.Size(1157, 190);
             this.dataGridView1.TabIndex = 26;
             // 
             // cboSearch
@@ -336,6 +336,7 @@
             this.btnAdd.TabIndex = 30;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
@@ -354,18 +355,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(879, 589);
+            this.ClientSize = new System.Drawing.Size(1173, 585);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.cboSearch);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.txtNotes);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtMobile);
             this.Controls.Add(this.txtSearch);
-            this.Controls.Add(this.txtWebskte);
+            this.Controls.Add(this.txtWebsite);
             this.Controls.Add(this.txtCompany);
             this.Controls.Add(this.txtPostalCode);
             this.Controls.Add(this.txtState);
@@ -373,8 +374,8 @@
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtLName);
             this.Controls.Add(this.txtFName);
-            this.Controls.Add(this.txtTile);
-            this.Controls.Add(this.txtNotes);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.Notes);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -411,8 +412,8 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label txtNotes;
-        private System.Windows.Forms.TextBox txtTile;
+        private System.Windows.Forms.Label Notes;
+        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.TextBox txtFName;
         private System.Windows.Forms.TextBox txtLName;
         private System.Windows.Forms.TextBox txtAddress;
@@ -420,11 +421,11 @@
         private System.Windows.Forms.TextBox txtState;
         private System.Windows.Forms.TextBox txtPostalCode;
         private System.Windows.Forms.TextBox txtCompany;
-        private System.Windows.Forms.TextBox txtWebskte;
+        private System.Windows.Forms.TextBox txtWebsite;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtNotes;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox cboSearch;
         private System.Windows.Forms.Button btnSearch;
