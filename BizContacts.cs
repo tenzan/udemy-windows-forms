@@ -16,5 +16,18 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
+
+        private void BizContacts_Load(object sender, EventArgs e)
+        {
+            cboSearch.SelectedIndex = 0; // first time in combobox is selected when the form loads
+            dataGridView1.DataSource = bindingSource1;
+
+            GetData("Select * from BizContacts");
+        }
+
+        private void GetData(string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
