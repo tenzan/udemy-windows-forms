@@ -51,7 +51,7 @@ namespace WindowsFormsApp1
         {
             SqlCommand command;
 
-            string insert = @"insert into BizContacts(Date_Added, Company, Website, Title, First_Name, Last_Name, Address, City, State, Postal_Code, Mobile, Notes) values(@Date_Added, @Company, @Website, @Title, @First_Name, @Last_Name, @Address, @City, @State, @Postal_Code, @Mobile, @Notes)";
+            string insert = @"insert into BizContacts(Date_Added, Company, Website, Title, First_Name, Last_Name, Address, City, State, Post_Code, Mobile, Notes) values(@Date_Added, @Company, @Website, @Title, @First_Name, @Last_Name, @Address, @City, @State, @Post_Code, @Mobile, @Notes)";
 
             using (SqlConnection conn = new SqlConnection(connString))
             {
@@ -61,21 +61,21 @@ namespace WindowsFormsApp1
                     command = new SqlCommand(insert, conn);
                     command.Parameters.AddWithValue(@"Date_Added", dateTimePicker1.Value.Date);
                     command.Parameters.AddWithValue(@"Company", txtCompany.Text);
-                    command.Parameters.AddWithValue(@"Website", txtWebsite);
+                    command.Parameters.AddWithValue(@"Website", txtWebsite.Text);
                     command.Parameters.AddWithValue(@"Title", txtTitle.Text);
                     command.Parameters.AddWithValue(@"First_Name", txtFName.Text);
                     command.Parameters.AddWithValue(@"Last_Name", txtLName.Text);
                     command.Parameters.AddWithValue(@"Address", txtAddress.Text);
                     command.Parameters.AddWithValue(@"City", txtCity.Text);
                     command.Parameters.AddWithValue(@"State", txtState.Text);
-                    command.Parameters.AddWithValue(@"Postal_Code", txtPostalCode.Text);
+                    command.Parameters.AddWithValue(@"Post_Code", txtPostCode.Text);
                     command.Parameters.AddWithValue(@"Mobile", txtMobile.Text);
                     command.Parameters.AddWithValue(@"Notes", txtNotes.Text);
                     command.ExecuteNonQuery();
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show(ex.StackTrace);
+                    MessageBox.Show(ex.Message);
                 }
             }
             GetData("Select * from BizContacts");

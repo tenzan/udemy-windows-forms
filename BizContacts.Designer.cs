@@ -48,7 +48,7 @@
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtCity = new System.Windows.Forms.TextBox();
             this.txtState = new System.Windows.Forms.TextBox();
-            this.txtPostalCode = new System.Windows.Forms.TextBox();
+            this.txtPostCode = new System.Windows.Forms.TextBox();
             this.txtCompany = new System.Windows.Forms.TextBox();
             this.txtWebsite = new System.Windows.Forms.TextBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -120,17 +120,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label6.Location = new System.Drawing.Point(6, 226);
+            this.label6.Location = new System.Drawing.Point(17, 225);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(90, 16);
+            this.label6.Size = new System.Drawing.Size(79, 16);
             this.label6.TabIndex = 5;
-            this.label6.Text = "Postal Code";
+            this.label6.Text = "Post Code";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("MS UI Gothic", 12F);
-            this.label7.Location = new System.Drawing.Point(25, 263);
+            this.label7.Location = new System.Drawing.Point(25, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(71, 16);
             this.label7.TabIndex = 6;
@@ -238,12 +238,12 @@
             this.txtState.Size = new System.Drawing.Size(284, 19);
             this.txtState.TabIndex = 18;
             // 
-            // txtPostalCode
+            // txtPostCode
             // 
-            this.txtPostalCode.Location = new System.Drawing.Point(106, 227);
-            this.txtPostalCode.Name = "txtPostalCode";
-            this.txtPostalCode.Size = new System.Drawing.Size(284, 19);
-            this.txtPostalCode.TabIndex = 19;
+            this.txtPostCode.Location = new System.Drawing.Point(106, 227);
+            this.txtPostCode.Name = "txtPostCode";
+            this.txtPostCode.Size = new System.Drawing.Size(284, 19);
+            this.txtPostCode.TabIndex = 19;
             // 
             // txtCompany
             // 
@@ -368,7 +368,7 @@
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.txtWebsite);
             this.Controls.Add(this.txtCompany);
-            this.Controls.Add(this.txtPostalCode);
+            this.Controls.Add(this.txtPostCode);
             this.Controls.Add(this.txtState);
             this.Controls.Add(this.txtCity);
             this.Controls.Add(this.txtAddress);
@@ -419,7 +419,7 @@
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.TextBox txtState;
-        private System.Windows.Forms.TextBox txtPostalCode;
+        private System.Windows.Forms.TextBox txtPostCode;
         private System.Windows.Forms.TextBox txtCompany;
         private System.Windows.Forms.TextBox txtWebsite;
         private System.Windows.Forms.TextBox txtSearch;
